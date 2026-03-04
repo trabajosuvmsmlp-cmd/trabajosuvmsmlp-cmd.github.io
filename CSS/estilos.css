@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+/* ===== CONFIGURACIÓN GENERAL ===== */
+body {
+    margin: 16px 24px;
+    font-family: 'Inter', sans-serif; /* Fuente de lectura */
+    font-size: 1rem; /* 16px base */
+    line-height: 1.6; /* cuerpo por defecto */
+    background-color: #F5F2ED; /* beige neutral */
+    color: #2E2E2E;
+}
+
+/* ===== H1 ===== */
+h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #8B0000; /* rojo institucional */
+    line-height: 1.2;
+    font-size: 1.75rem; /* mobile 28px */
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 2.25rem; /* desktop 36px */
+    }
+}
+
+/* ===== H2 ===== */
+h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    line-height: 1.25;
+    font-size: 1.25rem; /* mobile 20px */
+	color: #8B0000;
+}
+
+@media (min-width: 1024px) {
+    h2 {
+        font-size: 1.5rem; /* desktop 24px */
+    }
+}
+
+/* ===== PÁRRAFO INTRO ===== */
+.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    line-height: 1.55;
+    font-size: 1.0625rem; /* mobile 17px */
+}
+
+@media (min-width: 1024px) {
+    .intro {
+        font-size: 1.125rem; /* desktop 18px */
+    }
+}
+
+/* ===== PÁRRAFO CUERPO ===== */
+p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem; /* 16px */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* ===== CAPTIONS ===== */
+caption, small {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.4;
+}
+
+
+
+
+.botones {
+    display: flex;           
+    justify-content: center; /* centra horizontalmente */
+    margin: 2rem 0;          /* espacio arriba y abajo */
+	}
+
+.botones2 {
+    display: flex;           
+    justify-content: left; /* centra horizontalmente */
+    margin: 0rem 0;          /* espacio arriba y abajo */
+	}
+
+/* Oculta la lista usando altura máxima en lugar de display:none */
+#listaTemas {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+#listaTemas.activo {
+    max-height: 500px; /* o auto si quieres */
+}
+/* ===== LISTA DE RECURSOS ===== */
+#fuentes {
+    max-height: 0;           /* Oculto al inicio */
+    overflow: hidden;        /* Oculta contenido */
+    transition: max-height 0.5s ease; /* Animación suave */
+    margin: 1rem 0;
+}
+
+#fuentes.activo {
+    max-height: 500px;       /* Se muestra al activar */
+}
+
+.oculto {
+    display: none;
+}
+/* ===== CONTENEDOR COLUMNAS ===== */
+.contenedor {
+    column-gap: 32px;
+    margin-bottom: 2rem;
+}
+
+/* Columnas responsive */
+@media (min-width: 0px) {
+    .contenedor {
+        column-count: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .contenedor {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contenedor {
+        column-count: 3;
+    }
+}
+
+/* ===== LISTAS ===== */
+ul, ol {
+    padding-left: 20px;
+    margin-bottom: 1rem;
+    break-inside: avoid;
+}
+
+/* ===== IMÁGENES ===== */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.75rem 0;
+    border-radius: 8px;
+    break-inside: avoid;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 0.875rem; /* 14px */
+    color: #666666;
+}
